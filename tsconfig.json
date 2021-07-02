@@ -6,7 +6,8 @@
     "types": [
       "node",
       "@wdio/sync",
-      "@wdio/mocha-framework"
+      "@wdio/mocha-framework",
+      "expect-webdriverio"
     ],
     "module": "commonjs",
     "target": "es2020"
