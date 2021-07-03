@@ -1,15 +1,16 @@
+
 {
   "compilerOptions": {
-    "outDir": "./build",
-    "allowJs": true,
-    "inlineSourceMap": true,
-    "types": [
-      "node",
-      "@wdio/sync",
-      "@wdio/mocha-framework",
-      "expect-webdriverio"
-    ],
-    "module": "commonjs",
-    "target": "es2020"
+      "target": "ES6",
+      "types": [
+          "node",
+          "webdriverio/sync",
+          "@wdio/mocha-framework",
+          "expect-webdriverio"
+      ],
+      "outDir": "./dist",
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "module": "commonjs"
   }
 }

@@ -1,6 +1,6 @@
 // require("ts-node").register({files: true});
 
-exports.config = {
+const configToExport = {
     //
     // ====================
     // Runner Configuration
@@ -280,3 +280,12 @@ exports.config = {
     //onReload: function(oldSessionId, newSessionId) {
     //}
 }
+
+if (process.env.DEBUG == '1') {
+    console.log('==== RUNNING IN DEBUG MODE ====')
+    configToExport.mochaOpts.timeout = 9999999
+    //configToExport.logLevel = 'trace'
+    configToExport.capabilities[0].maxInstances = 1
+}
+
+exports.config = configToExport; 
