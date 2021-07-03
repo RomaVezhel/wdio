@@ -99,7 +99,7 @@ const configToExport = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost',
+    baseUrl: process.env.SUT_URL || 'http://localhost',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -281,11 +281,4 @@ const configToExport = {
     //}
 }
 
-if (process.env.DEBUG == '1') {
-    console.log('==== RUNNING IN DEBUG MODE ====')
-    configToExport.mochaOpts.timeout = 9999999
-    //configToExport.logLevel = 'trace'
-    configToExport.capabilities[0].maxInstances = 1
-}
-
-exports.config = configToExport; 
+exports.config = configToExport;
