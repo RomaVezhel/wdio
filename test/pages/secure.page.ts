@@ -7,7 +7,8 @@ class SecurePage extends Page {
     /**
      * define selectors using getter methods
      */
-    get flashAlert () { return $('#flash') }
+    get flashAlert () { 
+        return $('#flash') }
 }
 
 export const securePage = new SecurePage();

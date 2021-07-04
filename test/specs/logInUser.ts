@@ -3,7 +3,7 @@ import { securePage } from "../pages/secure.page";
 
 
 
-describe('My Login application', () => {
+describe.skip('My Login application', () => {
     it('should login with valid credentials',  () => {
          loginPage.open();
 
