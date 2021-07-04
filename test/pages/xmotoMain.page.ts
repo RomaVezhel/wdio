@@ -9,9 +9,11 @@ class MainPage {
     }
 
     getTextCategoryList() {
-        return this.categoryList.map((element) => 
-        console.log(element.getText())
-        );
+        const categoryList = [];
+        this.categoryList.map((element) => 
+        categoryList.push(element.getText()));
+
+        return categoryList;
     } 
 
 }
