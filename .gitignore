@@ -10,6 +10,8 @@ yarn.lock
 
 # reports folders
 test-utils/reports
+allure-report
+allure-results
 
 # testrail run-id folder
 test-utils/test-rail/run-id
